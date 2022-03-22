@@ -191,3 +191,5 @@ dkms.conf
 src_cpp/
 src_java/
 .vs/
+.vscode/tasks.json
+.vscode/launch.json

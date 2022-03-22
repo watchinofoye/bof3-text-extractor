@@ -50,8 +50,8 @@ int main(int argc, char *argv[])
         return 6;
     }    
 
-    byte dialogue_section[section_size];
-    if (fread(dialogue_section, 1, sizeof(dialogue_section), area_file) != sizeof(dialogue_section))
+    byte *dialogue_section = calloc(section_size, sizeof(byte));
+    if (fread(dialogue_section, 1, section_size, area_file) != section_size)
     {
         printf("Error reading file!\n");
         fclose(area_file);
